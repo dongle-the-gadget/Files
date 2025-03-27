@@ -58,6 +58,7 @@ namespace Files.App.Data.Commands
 		OpenFileLocation,
 		RefreshItems,
 		Rename,
+		AlwaysKeepOnDevice,
 
 		// Selection
 		SelectAll,

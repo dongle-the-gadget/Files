@@ -619,7 +619,16 @@ namespace Files.App.Data.Factories
 				new ContextMenuFlyoutItemViewModelBuilder(Commands.FormatDrive).Build(),
 				// Shell extensions are not available on the FTP server or in the archive,
 				// but following items are intentionally added because icons in the context menu will not appear
-				// unless there is at least one menu item with an icon that is not an ThemedIconModel. (#12943)
+				// unless there is at least one menu item with an icon that is not an ThemedIconModel. (#12943),
+				new ContextMenuFlyoutItemViewModel()
+				{
+					ItemType = ContextMenuFlyoutItemType.Separator,
+					ShowItem = Commands.AlwaysKeepOnDevice.IsExecutable
+				},
+				new ContextMenuFlyoutItemViewModelBuilder(Commands.AlwaysKeepOnDevice)
+				{
+					IsVisible = Commands.AlwaysKeepOnDevice.IsExecutable
+				}.Build(),
 				new ContextMenuFlyoutItemViewModel()
 				{
 					ItemType = ContextMenuFlyoutItemType.Separator,

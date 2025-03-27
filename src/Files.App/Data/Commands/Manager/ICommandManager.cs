@@ -67,6 +67,7 @@ namespace Files.App.Data.Commands
 		IRichCommand OpenFileLocation { get; }
 		IRichCommand RefreshItems { get; }
 		IRichCommand Rename { get; }
+		IRichCommand AlwaysKeepOnDevice { get; }
 
 		IRichCommand PinToStart { get; }
 		IRichCommand UnpinFromStart { get; }
